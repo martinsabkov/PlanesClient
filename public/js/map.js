@@ -118,7 +118,6 @@ function initMap() {
 
                 google.maps.event.addListener(planeIcon, 'click', (function (planeIcon, i) {
                     return function () {
-                        axios.get('http://localhost:8888/lsapp/public/planes/'+ response.data["states"][i][0].toLowerCase())
                             .then(function (res) {
                                 console.log(response.data["states"][i][0]);
                                 console.log(res);
