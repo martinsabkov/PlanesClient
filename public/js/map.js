@@ -73,7 +73,6 @@ function initMap() {
 
 setInterval(
 function () {
-    axios.get('http://localhost:8888/lsapp/public/planes/')
 
         .then(function (response) {
             var infowindow = new google.maps.InfoWindow();
@@ -134,7 +133,6 @@ function () {
 
                 google.maps.event.addListener(planeIcon, 'click', (function (planeIcon, i) {
                     return function () {
-                        axios.get('http://localhost:8888/lsapp/public/planes/' + response.data["states"][i][0].toLowerCase())
                             .then(function (res) {
                                        /* var div = document.createElement("div");
                                         div.className += "obj";
