@@ -73,6 +73,7 @@ function initMap() {
 
 setInterval(
 function () {
+    axios.get('http://localhost/server/Laravel_Final_Project/laravel_planes/public/planes/')
 
         .then(function (response) {
             var infowindow = new google.maps.InfoWindow();
@@ -133,6 +134,7 @@ function () {
 
                 google.maps.event.addListener(planeIcon, 'click', (function (planeIcon, i) {
                     return function () {
+                        axios.get('http://localhost/server/Laravel_Final_Project/laravel_planes/public/planes/' + response.data["states"][i][0].toLowerCase())
                             .then(function (res) {
                                        /* var div = document.createElement("div");
                                         div.className += "obj";
